@@ -1,0 +1,504 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-T">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Speaker Mike Johnson Digital Donation Campaign</title>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <style>
+        body {
+            font-family: 'Inter', sans-serif;
+        }
+        .tab-active {
+            border-bottom-width: 4px;
+            border-color: #dc2626; /* red-600 */
+            color: #0284c7; /* sky-600 */
+            font-weight: 600;
+        }
+        .tab-inactive {
+            color: #475569; /* slate-600 */
+        }
+        .content-section {
+            display: none;
+        }
+        .content-section.active {
+            display: block;
+        }
+        .message-bubble {
+            max-width: 75%;
+            padding: 12px 16px;
+            border-radius: 16px;
+            margin-bottom: 8px;
+        }
+        .sms-bubble {
+            background-color: #e0f2fe; /* sky-100 */
+            color: #0c4a6e; /* sky-800 */
+            align-self: flex-start; /* Assuming received SMS */
+        }
+        .mms-image-placeholder {
+            width: 100%;
+            height: 150px;
+            background-color: #cbd5e1; /* slate-300 */
+            display: flex;
+            align-items: center;
+            justify-content: center;
+            color: #475569; /* slate-600 */
+            border-radius: 8px;
+            margin-bottom: 8px;
+        }
+        .email-preview {
+            border: 1px solid #e2e8f0; /* slate-200 */
+            border-radius: 8px;
+            padding: 16px;
+            background-color: #f8fafc; /* slate-50 */
+        }
+        .landing-page-mockup {
+            border: 2px solid #94a3b8; /* slate-400 */
+            border-radius: 8px;
+            padding: 24px;
+            background-color: white;
+            box-shadow: 0 4px 6px -1px rgb(0 0 0 / 0.1), 0 2px 4px -2px rgb(0 0 0 / 0.1);
+        }
+        .survey-question {
+            margin-bottom: 1rem;
+            padding: 0.75rem;
+            background-color: #f1f5f9; /* slate-100 */
+            border-radius: 0.375rem;
+        }
+        .survey-question label {
+            display: block;
+            margin-bottom: 0.5rem;
+            font-weight: 500;
+            color: #334155; /* slate-700 */
+        }
+        .survey-question input[type="radio"], .survey-question input[type="checkbox"] {
+            margin-right: 0.5rem;
+        }
+        .survey-question input[type="text"], .survey-question textarea {
+            width: 100%;
+            padding: 0.5rem;
+            border: 1px solid #cbd5e1; /* slate-300 */
+            border-radius: 0.375rem;
+            margin-top: 0.25rem;
+        }
+        .button-cta {
+            background-color: #dc2626; /* red-600 */
+            color: white;
+            padding: 0.75rem 1.5rem;
+            border-radius: 0.375rem;
+            text-align: center;
+            font-weight: 600;
+            display: inline-block;
+            margin-top: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        .button-cta:hover {
+            background-color: #b91c1c; /* red-700 */
+        }
+        .donation-tier-button {
+            background-color: #0ea5e9; /* sky-500 */
+            color: white;
+            padding: 0.5rem 1rem;
+            border-radius: 0.375rem;
+            text-align: center;
+            font-weight: 500;
+            display: block;
+            margin-bottom: 0.5rem;
+            transition: background-color 0.3s;
+        }
+        .donation-tier-button:hover {
+            background-color: #0284c7; /* sky-600 */
+        }
+    </style>
+</head>
+<body class="bg-slate-100 text-slate-800 antialiased">
+
+    <header class="bg-sky-600 text-white p-6 shadow-md">
+        <div class="container mx-auto">
+            <h1 class="text-3xl font-bold text-center">Speaker Mike Johnson Digital Donation Campaign</h1>
+        </div>
+    </header>
+
+    <nav class="bg-white shadow-sm sticky top-0 z-50">
+        <div class="container mx-auto flex justify-center space-x-4 sm:space-x-8 py-3 px-2">
+            <button id="tabThemeA" class="tab-button text-sm sm:text-base py-2 px-3 sm:px-4 tab-active">Theme A: Protecting House Majority</button>
+            <button id="tabThemeB" class="tab-button text-sm sm:text-base py-2 px-3 sm:px-4 tab-inactive">Theme B: Our Last Stand</button>
+        </div>
+    </nav>
+
+    <main class="container mx-auto p-4 sm:p-6">
+        <div class="bg-white p-6 rounded-lg shadow mb-8">
+            <h2 class="text-2xl font-semibold text-sky-700 mb-3">Welcome to the Campaign Showcase</h2>
+            <p class="text-slate-600 leading-relaxed">
+                This interactive application presents the digital fundraising copy developed for Speaker Mike Johnson.
+                You can explore two distinct campaign themes: "Protecting the House Majority" and "Our Last Stand: Saving America & Trump's Vision."
+                Use the tabs above to switch between themes. Within each theme, you'll find mockups of the SMS, MMS, Email, and Landing Page copy.
+                Theme B's landing page includes an interactive "Republican Intel Audit" survey.
+            </p>
+        </div>
+
+        <section id="contentThemeA" class="content-section active">
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-1">Theme A: Protecting the House Majority</h2>
+                <p class="text-sm text-slate-500 mb-4">Core Message: The Republican House Majority, led by Speaker Mike Johnson, is the last line of defense against the opposing party's agenda. Your immediate support is crucial to maintain this majority and protect our nation's future.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">SMS</h3>
+                    <p class="text-xs text-slate-500 mb-2">Sender: Mike Johnson</p>
+                    <div class="flex flex-col items-start">
+                        <div class="message-bubble sms-bubble">
+                            <p>Speaker Johnson here: The House Majority is under attack. We need to act NOW to stop the radical Left agenda. Your $1 connects YOU directly to President Trump's legacy by securing our House Majority. Chip in > [LINK]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">MMS</h3>
+                    <p class="text-xs text-slate-500 mb-2">Sender: Mike Johnson</p>
+                    <div class="mms-image-placeholder">
+                        <span>Image/Graphic Idea: Strong, patriotic image</span>
+                    </div>
+                    <div class="message-bubble sms-bubble w-full">
+                        <p>This is the MOST important $1 you'll ever give. Speaker Johnson is fighting to protect our House Majority and President Trump's America First legacy. We cannot afford to lose. Your immediate support is vital. Chip in $1 >> [LINK]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">Email</h3>
+                <div class="email-preview space-y-3">
+                    <p><span class="font-semibold">Sender:</span> Mike Johnson (or Team Johnson)</p>
+                    <div>
+                        <p class="font-semibold">Subject Lines (Examples):</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600">
+                            <li>This is the ONLY way to save our House Majority</li>
+                            <li>DO NOT IGNORE: Our House Majority is in DANGER</li>
+                            <li>Speaker Johnson: Don't let them win.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Preview Texts (Examples):</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600">
+                            <li>We've done the math, this will surprise you</li>
+                            <li>FName, our conservative House Majority is on the line.</li>
+                            <li>See how your $1 directly defends our values.</li>
+                        </ul>
+                    </div>
+                    <hr class="my-3">
+                    <p class="font-semibold">Body Copy:</p>
+                    <div class="text-sm text-slate-700 leading-relaxed space-y-2">
+                        <p>FName - this is Speaker Mike Johnson.</p>
+                        <p>This message is critical. Our conservative House Majority is the last defense against radical policies. As Speaker, I'm fighting, but I can't do it alone.</p>
+                        <p>Losing even one seat means they'll dismantle everything we've built, and President Trump's America First agenda will be dead.</p>
+                        <p>Just $1 helps us reach thousands of voters and protect our House Majority, ensuring Trump's agenda moves forward. Every dollar empowers us to defend our values and his legacy. Your $1 today is a direct investment in securing our conservative future and protecting President Trump's achievements.</p>
+                        <p>Can I count on you to help secure our House Majority and protect President Trump's legacy with just $1?</p>
+                        <p>CHIP IN $1 >> [LINK]</p>
+                        <p>Thank you,</p>
+                        <p>Speaker Mike Johnson</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h3 class="text-xl font-semibold text-sky-600 mb-4 border-b pb-2">Landing Page Mockup</h3>
+                <div class="landing-page-mockup space-y-4">
+                    <h4 class="text-2xl font-bold text-red-600 text-center">$1 = SECURING OUR HOUSE MAJORITY & PROTECTING TRUMP'S LEGACY</h4>
+                    <p class="text-center font-medium text-slate-700">Our best political minds have figured out that all it takes is $1 to help secure our House Majority and keep President Trump's America First agenda alive.</p>
+                    <div class="text-slate-600 space-y-3 leading-relaxed">
+                        <p>If we don't hold the House Majority, EVERYTHING President Trump attempts will be SHUTDOWN by the radical left. Without a strong Republican majority, they will push through their extreme policies, raise taxes, and undermine our freedoms, undoing everything President Trump fought for. Speaker Johnson is on the front lines, fighting every single day to protect our values and block their agenda, ensuring President Trump's vision for America can still thrive.</p>
+                        <p><span class="font-bold text-red-600">Don't let the radical left undo the very threads of the American flag.</span></p>
+                        <p>Just $1 packs a punch and goes a LONG WAY. It helps us reach more voters, expose their plans, and hold the line, safeguarding President Trump's legacy. The best part is, the margin was so close last time; if you do your part, we WILL WIN. Every patriot's contribution secures our majority and protects America, just as President Trump envisioned.</p>
+                    </div>
+                    <p class="text-center font-semibold text-lg text-sky-700 mt-4">Can I count on you to help Speaker Mike Johnson secure our House Majority?</p>
+                    <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-4">
+                        <a href="#" class="donation-tier-button">CHIP IN $5 >></a>
+                        <a href="#" class="donation-tier-button">CHIP IN $10 >></a>
+                        <a href="#" class="donation-tier-button">CHIP IN $25 >></a>
+                        <a href="#" class="donation-tier-button">CHIP IN $50 >></a>
+                        <a href="#" class="donation-tier-button">CHIP IN $100 >></a>
+                        <a href="#" class="donation-tier-button">CHIP IN $500 >></a>
+                    </div>
+                    <div class="text-center mt-2">
+                         <a href="#" class="text-sky-600 hover:text-sky-700 font-medium">Other Amount >></a>
+                    </div>
+
+                    <div class="mt-6 pt-4 border-t border-slate-300">
+                        <label class="block text-center font-semibold text-lg text-sky-700 mb-2">Join the Speaker's Reserves?</label>
+                        <div class="flex items-center justify-center mb-4">
+                            <input type="checkbox" id="joinReservesA" name="join_reserves_a" class="mr-2">
+                            <label for="joinReservesA" class="text-slate-700">Yes, I want to join the Speaker's Reserves!</label>
+                        </div>
+                        <div id="reservesOptionsA" class="hidden text-center space-y-2">
+                            <p class="font-medium text-slate-700">Make your payment:</p>
+                            <div>
+                                <input type="radio" id="paymentMonthlyA" name="payment_frequency_a" value="monthly" class="mr-2">
+                                <label for="paymentMonthlyA" class="font-normal mr-4">Monthly</label>
+                                <input type="radio" id="paymentQuarterlyA" name="payment_frequency_a" value="quarterly" class="mr-2">
+                                <label for="paymentQuarterlyA" class="font-normal mr-4">Quarterly</label>
+                                <input type="radio" id="paymentAnnuallyA" name="payment_frequency_a" value="annually" class="mr-2">
+                                <label for="paymentAnnuallyA" class="font-normal">Annually</label>
+                            </div>
+                        </div>
+                    </div>
+
+                    <p class="text-xs text-slate-500 text-center mt-4">Reinforce Trust/Urgency: Short quote from Speaker Johnson or statement about the critical nature of the moment, linking to conservative/Trump movements.</p>
+                </div>
+            </div>
+        </section>
+
+        <section id="contentThemeB" class="content-section">
+            <div class="bg-white p-6 rounded-lg shadow mb-6">
+                <h2 class="text-2xl font-semibold text-sky-700 mb-1">Theme B: Our Last Stand: Saving America & Trump's Vision</h2>
+                <p class="text-sm text-slate-500 mb-4">Core Message: This is our LAST CHANCE to save America and secure President Trump's America First vision. Speaker Mike Johnson is on the front lines, and he needs your immediate, unwavering support to win this fight and reclaim our country from the brink.</p>
+            </div>
+
+            <div class="grid grid-cols-1 md:grid-cols-2 gap-6">
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">SMS</h3>
+                    <p class="text-xs text-slate-500 mb-2">Sender: Mike Johnson</p>
+                    <div class="flex flex-col items-start">
+                        <div class="message-bubble sms-bubble">
+                            <p>Speaker Johnson: This is it. Our LAST CHANCE to save America and secure Trump's vision. I need you. > [LINK] Your $1 is a weapon in this fight. Chip in NOW > [LINK]</p>
+                        </div>
+                    </div>
+                </div>
+
+                <div class="bg-white p-6 rounded-lg shadow">
+                    <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">MMS</h3>
+                    <p class="text-xs text-slate-500 mb-2">Sender: Mike Johnson</p>
+                     <div class="mms-image-placeholder">
+                        <span>Image/Graphic Idea: Dramatic, urgent image</span>
+                    </div>
+                    <div class="message-bubble sms-bubble w-full">
+                        <p>This is our FINAL STAND. Speaker Johnson is fighting for Trump's America, for our country. The radical left pushes us to the brink; every patriot must step up. Your $1 is critical. Don't let us down. Chip in $1 >> [LINK]</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h3 class="text-xl font-semibold text-sky-600 mb-3 border-b pb-2">Email</h3>
+                 <div class="email-preview space-y-3">
+                    <p><span class="font-semibold">Sender:</span> Mike Johnson (or Team Johnson)</p>
+                    <div>
+                        <p class="font-semibold">Subject Lines (Examples):</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600">
+                            <li>This is our LAST CHANCE to save America.</li>
+                            <li>DO NOT IGNORE: The Future of Trump's America is at Stake.</li>
+                            <li>Speaker Johnson's Urgent Call: Save Our Country.</li>
+                        </ul>
+                    </div>
+                    <div>
+                        <p class="font-semibold">Preview Texts (Examples):</p>
+                        <ul class="list-disc list-inside text-sm text-slate-600">
+                            <li>The time for talk is over. This is about action.</li>
+                            <li>FName, the very soul of our nation hangs in the balance.</li>
+                            <li>See how your $1 helps Speaker Johnson lead our last stand.</li>
+                        </ul>
+                    </div>
+                    <hr class="my-3">
+                    <p class="font-semibold">Body Copy:</p>
+                    <div class="text-sm text-slate-700 leading-relaxed space-y-2">
+                        <p>FName – it’s Speaker Mike Johnson.</p>
+                        <p>We are at a crossroads. This is our LAST CHANCE to save America and secure President Trump's America First vision. The forces against us are relentless, and we need patriots like you who understand what's truly at stake.</p>
+                        <p>As Speaker, I'm fighting on the front lines – to secure our border, restore fiscal sanity, and protect our freedoms, ensuring President Trump's agenda is a reality. The battle is fierce, and time is running out.</p>
+                        <p>Your $1 isn't just money; it's a declaration, a weapon in this final stand. It empowers me to fight against the Washington establishment, just as President Trump would want. Every dollar helps us reach more voters and mobilize the silent majority.</p>
+                        <p>Can I count on you to join me in this last stand? Just $1 today is a powerful blow against those trying to destroy our country. It's an investment in our future, in President Trump's legacy, and in the America we all believe in.</p>
+                        <p>This is it. No second chances. I'll be looking for your immediate support as we embark on this critical mission to save our country.</p>
+                        <p>JOIN OUR LAST STAND >> [LINK]</p>
+                        <p>Thank you,</p>
+                        <p>Speaker Mike Johnson</p>
+                    </div>
+                </div>
+            </div>
+
+            <div class="bg-white p-6 rounded-lg shadow mt-6">
+                <h3 class="text-xl font-semibold text-sky-600 mb-4 border-b pb-2">Landing Page Mockup (with Interactive Survey)</h3>
+                <div class="landing-page-mockup space-y-6">
+                    <h4 class="text-2xl font-bold text-red-600 text-center">COMPLETE YOUR REPUBLICAN INTEL AUDIT FOR SPEAKER JOHNSON</h4>
+                    <p class="text-center font-medium text-slate-700">FName – it's Speaker Mike Johnson. I was speaking with my conservative allies, and they told me they tried contacting you but heard nothing. You’re by far the smartest Patriot in my rolodex. Without your input here, we don’t stand a chance in this fight to save America and secure President Trump's agenda.</p>
+                    
+                    <form id="intelAuditForm" class="space-y-4">
+                        <p class="font-semibold text-lg text-sky-700">Can you complete this Republican Intel Audit for me? I want to bring good news when I see our allies next week. I’ll be looking for your answers.</p>
+                        
+                        <div class="survey-question">
+                            <label for="q1_border">On a scale of 1-5, how concerned are you about the current state of our border security?</label>
+                            <div>
+                                <input type="radio" id="q1_1" name="border_concern" value="1"><label for="q1_1" class="font-normal ml-1 mr-3">1 (Not Concerned)</label>
+                                <input type="radio" id="q1_2" name="border_concern" value="2"><label for="q1_2" class="font-normal ml-1 mr-3">2</label>
+                                <input type="radio" id="q1_3" name="border_concern" value="3"><label for="q1_3" class="font-normal ml-1 mr-3">3</label>
+                                <input type="radio" id="q1_4" name="border_concern" value="4"><label for="q1_4" class="font-normal ml-1 mr-3">4</label>
+                                <input type="radio" id="q1_5" name="border_concern" value="5"><label for="q1_5" class="font-normal ml-1">5 (Extremely Concerned)</label>
+                            </div>
+                        </div>
+
+                        <div class="survey-question">
+                            <label for="q2_most_important_issue">What is the single most important issue facing America today?</label>
+                            <input type="text" id="q2_most_important_issue" name="most_important_issue" placeholder="Your answer here...">
+                        </div>
+
+                        <div class="survey-question">
+                            <label>Do you believe President Trump's America First policies are essential for our nation's future?</label>
+                            <div>
+                                <input type="radio" id="q3_yes" name="trump_policies" value="yes"><label for="q3_yes" class="font-normal ml-1 mr-3">Yes, absolutely</label>
+                                <input type="radio" id="q3_somewhat" name="trump_policies" value="somewhat"><label for="q3_somewhat" class="font-normal ml-1 mr-3">Somewhat</label>
+                                <input type="radio" id="q3_no" name="trump_policies" value="no"><label for="q3_no" class="font-normal ml-1">No</label>
+                            </div>
+                        </div>
+
+                        <div class="survey-question">
+                            <label>How confident are you that the Republican Party can win back the White House and Senate in the next election without strong grassroots support?</label>
+                            <div>
+                                <input type="radio" id="q4_vc" name="confidence" value="very_confident"><label for="q4_vc" class="font-normal ml-1 mr-3">Very Confident</label>
+                                <input type="radio" id="q4_sc" name="confidence" value="somewhat_confident"><label for="q4_sc" class="font-normal ml-1 mr-3">Somewhat Confident</label>
+                                <input type="radio" id="q4_nc" name="confidence" value="not_confident"><label for="q4_nc" class="font-normal ml-1 mr-3">Not Confident</label>
+                                <input type="radio" id="q4_cu" name="confidence" value="completely_unconfident"><label for="q4_cu" class="font-normal ml-1">Completely Unconfident</label>
+                            </div>
+                        </div>
+                        
+                        <div class="survey-question">
+                            <label>Which of the following issues is most critical to you when considering your vote? (Select all that apply)</label>
+                            <div>
+                                <input type="checkbox" id="issue_economy" name="critical_issues" value="economy"><label for="issue_economy" class="font-normal ml-1">Inflation/Economy</label><br>
+                                <input type="checkbox" id="issue_immigration" name="critical_issues" value="immigration"><label for="issue_immigration" class="font-normal ml-1">Immigration/Border Security</label><br>
+                                <input type="checkbox" id="issue_integrity" name="critical_issues" value="integrity"><label for="issue_integrity" class="font-normal ml-1">Election Integrity</label><br>
+                                <input type="checkbox" id="issue_freedoms" name="critical_issues" value="freedoms"><label for="issue_freedoms" class="font-normal ml-1">Protecting Constitutional Freedoms (e.g., 2nd Amendment)</label><br>
+                                <input type="checkbox" id="issue_foreign" name="critical_issues" value="foreign_policy"><label for="issue_foreign" class="font-normal ml-1">Foreign Policy/National Security</label><br>
+                                <input type="checkbox" id="issue_other_cb" name="critical_issues_other_cb"><label for="issue_other_cb" class="font-normal ml-1">Other:</label>
+                                <input type="text" id="issue_other_text" name="critical_issues_other_text" placeholder="Please Specify" class="mt-1 ml-4 w-auto inline-block">
+                            </div>
+                        </div>
+
+                        <div class="survey-question">
+                            <label for="q6_rally_message">What message do you believe needs to be amplified most to rally true patriots across the country?</label>
+                            <textarea id="q6_rally_message" name="rally_message" rows="3" placeholder="Your thoughts..."></textarea>
+                        </div>
+                         <div id="surveyConfirmation" class="hidden p-3 bg-green-100 text-green-700 rounded-md">Thank you for your input! Your voice is crucial.</div>
+                        <button type="button" id="submitSurvey" class="button-cta bg-sky-600 hover:bg-sky-700">Submit Audit</button>
+                    </form>
+
+                    <div id="donationSection" class="mt-6 pt-6 border-t border-slate-300">
+                        <p class="text-center font-semibold text-lg text-slate-700">Your input is invaluable, and now, your immediate support is critical. Your $1 isn't just a donation; it's a vital lifeline. It fuels our critical operations, allowing us to expose the truth, mobilize patriots, and secure victories in this ultimate battle for America's future and President Trump's enduring legacy. Every patriot must step up NOW. If we unite and fight, we WILL reclaim our country and secure the future President Trump envisioned. This is our moment. This is our fight. This is our last chance.</p>
+                        <div class="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-3 gap-3 mt-6">
+                            <a href="#" class="donation-tier-button">CHIP IN $5 >></a>
+                            <a href="#" class="donation-tier-button">CHIP IN $10 >></a>
+                            <a href="#" class="donation-tier-button">CHIP IN $25 >></a>
+                            <a href="#" class="donation-tier-button">CHIP IN $50 >></a>
+                            <a href="#" class="donation-tier-button">CHIP IN $100 >></a>
+                            <a href="#" class="donation-tier-button">CHIP IN $500 >></a>
+                        </div>
+                        <div class="text-center mt-2">
+                            <a href="#" class="text-sky-600 hover:text-sky-700 font-medium">Other Amount >></a>
+                        </div>
+
+                        <div class="mt-6 pt-4 border-t border-slate-300">
+                            <label class="block text-center font-semibold text-lg text-sky-700 mb-2">Join the Speaker's Reserves?</label>
+                            <div class="flex items-center justify-center mb-4">
+                                <input type="checkbox" id="joinReservesB" name="join_reserves_b" class="mr-2">
+                                <label for="joinReservesB" class="text-slate-700">Yes, I want to join the Speaker's Reserves!</label>
+                            </div>
+                            <div id="reservesOptionsB" class="hidden text-center space-y-2">
+                                <p class="font-medium text-slate-700">Make your payment:</p>
+                                <div>
+                                    <input type="radio" id="paymentMonthlyB" name="payment_frequency_b" value="monthly" class="mr-2">
+                                    <label for="paymentMonthlyB" class="font-normal mr-4">Monthly</label>
+                                    <input type="radio" id="paymentQuarterlyB" name="payment_frequency_b" value="quarterly" class="mr-2">
+                                    <label for="paymentQuarterlyB" class="font-normal mr-4">Quarterly</label>
+                                    <input type="radio" id="paymentAnnuallyB" name="payment_frequency_b" value="annually" class="mr-2">
+                                    <label for="paymentAnnuallyB" class="font-normal">Annually</label>
+                                </div>
+                            </div>
+                        </div>
+                    </div>
+                    <p class="text-xs text-slate-500 text-center mt-4">Reinforce Trust/Urgency: Powerful, rallying quote from Speaker Johnson, emphasizing the dire situation and need for immediate action.</p>
+                </div>
+            </div>
+        </section>
+    </main>
+
+    <footer class="text-center p-6 mt-12 bg-slate-200 text-slate-600 text-sm">
+        <p>Paid for by [Committee Name Placeholder]</p>
+        <p>&copy; <span id="currentYear"></span> All Rights Reserved.</p>
+    </footer>
+
+    <script>
+        const tabThemeA = document.getElementById('tabThemeA');
+        const tabThemeB = document.getElementById('tabThemeB');
+        const contentThemeA = document.getElementById('contentThemeA');
+        const contentThemeB = document.getElementById('contentThemeB');
+        const submitSurveyButton = document.getElementById('submitSurvey');
+        const surveyConfirmationMessage = document.getElementById('surveyConfirmation');
+        const intelAuditForm = document.getElementById('intelAuditForm');
+
+        const joinReservesA = document.getElementById('joinReservesA');
+        const reservesOptionsA = document.getElementById('reservesOptionsA');
+        const joinReservesB = document.getElementById('joinReservesB');
+        const reservesOptionsB = document.getElementById('reservesOptionsB');
+
+        function setActiveTab(activeTab, activeContent) {
+            // Reset all tabs
+            [tabThemeA, tabThemeB].forEach(tab => {
+                tab.classList.remove('tab-active');
+                tab.classList.add('tab-inactive');
+            });
+            // Reset all content sections
+            [contentThemeA, contentThemeB].forEach(content => {
+                content.classList.remove('active');
+            });
+
+            // Set active tab and content
+            activeTab.classList.add('tab-active');
+            activeTab.classList.remove('tab-inactive');
+            activeContent.classList.add('active');
+        }
+
+        tabThemeA.addEventListener('click', () => {
+            setActiveTab(tabThemeA, contentThemeA);
+        });
+
+        tabThemeB.addEventListener('click', () => {
+            setActiveTab(tabThemeB, contentThemeB);
+        });
+        
+        if (submitSurveyButton) {
+            submitSurveyButton.addEventListener('click', () => {
+                const borderConcernSelected = intelAuditForm.querySelector('input[name="border_concern"]:checked');
+                if (!borderConcernSelected) {
+                    alert('Please answer at least the first question (border concern) before submitting.');
+                    return;
+                }
+                surveyConfirmationMessage.classList.remove('hidden');
+                submitSurveyButton.disabled = true;
+                submitSurveyButton.textContent = 'Audit Submitted!';
+                submitSurveyButton.classList.remove('bg-sky-600', 'hover:bg-sky-700');
+                submitSurveyButton.classList.add('bg-green-500');
+
+
+                setTimeout(() => {
+                    surveyConfirmationMessage.classList.add('hidden');
+                }, 3000);
+            });
+        }
+
+        joinReservesA.addEventListener('change', () => {
+            if (joinReservesA.checked) {
+                reservesOptionsA.classList.remove('hidden');
+            } else {
+                reservesOptionsA.classList.add('hidden');
+            }
+        });
+
+        joinReservesB.addEventListener('change', () => {
+            if (joinReservesB.checked) {
+                reservesOptionsB.classList.remove('hidden');
+            } else {
+                reservesOptionsB.classList.add('hidden');
+            }
+        });
+
+        document.getElementById('currentYear').textContent = new Date().getFullYear();
+    </script>
+
+</body>
+</html>
